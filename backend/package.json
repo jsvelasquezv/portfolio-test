@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "mongoose": "6.3.3"
+  },
+  "devDependencies": {
+    "jest": "28.1.0"
+  }
+}

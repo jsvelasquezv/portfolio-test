@@ -1,0 +1,11 @@
+{
+  "config": {
+    "profile": "default"
+  },
+  "variables": {
+    "MONGO_SRV": "mongodb+srv://<username>:<password>@<host>/?retryWrites=true&w=majority",
+    "TWITTER_API_URL": "https://api.twitter.com/2",
+    "TWITTER_TOKEN": "token",
+    "MAX_TWEETS_TO_RETURN": 5
+  }
+}

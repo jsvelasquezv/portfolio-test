@@ -1,0 +1,28 @@
+service: portfolio
+frameworkVersion: '3'
+custom:
+  env: ${file(./env.json)}
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  profile: ${self:custom.env.config.profile}
+  environment:
+    MONGO_SRV: ${self:custom.env.variables.MONGO_SRV}
+    TWITTER_API_URL: ${self:custom.env.variables.TWITTER_API_URL}
+    TWITTER_TOKEN: ${self:custom.env.variables.TWITTER_TOKEN}
+    MAX_TWEETS_TO_RETURN: ${self:custom.env.variables.MAX_TWEETS_TO_RETURN}
+
+functions:
+  getPortfolio:
+    handler: src/handlers/portfolio.getById
+    events:
+      - httpApi:
+          path: /portfolio/{id}
+          method: get
+  updatePortfolio:
+    handler: src/handlers/portfolio.updateOne
+    events:
+      - httpApi:
+          path: /portfolio/{id}
+          method: patch
