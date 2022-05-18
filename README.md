@@ -1,3 +1,5 @@
+You can acces the application [here](https://main.d1h55qb2nfnpvx.amplifyapp.com/);
+
 ## Backend
 
 The backend is built with serverless framework, MongoDB and Mongoose running on AWS lambda with NodeJS 14.x. Unit tests made with jest.
@@ -26,8 +28,7 @@ functions:
 
 ## FrontEnd
 
-You can acces the application [here](https://main.d1h55qb2nfnpvx.amplifyapp.com/)
-The frontend is built with React, since is a really simple aplication it does't use any state management library.
+The frontend is built with React, since is a really simple aplication it does't use any state management library. Is deployed in AWS Amplify.
 To start the development server just run the next command, it will run in the port 3000.
 
 ```bash
